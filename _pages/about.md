@@ -19,6 +19,9 @@ latest_posts: true  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
+<!-- <div style="float: left; width: 50%;">第一列</div>
+<div style="float: left; width: 50%;">第二列</div> -->
+
 
 The Human-Centered AI Lab at Northeastern University is lead by Prof. [Dakuo Wang](https://www.dakuowang.com/). 
 
