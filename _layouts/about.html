@@ -137,11 +137,11 @@ layout: default
         </div>
       </div>
 
-      <!-- All Students (Excluding the professor) -->
+      <!-- Visiting Students (Excluding the professor and phd students) -->
       <div class="row justify-content-center">
-        {% assign students = site.members | where_exp: "member", "member.group
-        != 'Faculty' and member.group != 'Research Assistant'" %} {% for student
-        in students %}
+        {% assign visiting_students = site.members | where_exp: "member",
+        "member.group == 'Visiting Student'" %} {% for student in
+        visiting_students %}
         <div class="col-6 col-md-2 mb-3">
           {% if student.profile.website %}
           <a href="{{ student.profile.website }}" class="no-decoration">
@@ -151,7 +151,7 @@ layout: default
               style="height: 250px"
             >
               <img
-                src="{{ student.profile.image | default: 'husky-image.jpeg' | prepend: '/assets/img/' | relative_url }}"
+                src="{{ student.profile.image | default: 'husky2.jpg' | prepend: '/assets/img/' | relative_url }}"
                 class="card-img-top mx-auto mt-4"
                 alt="{{ student.profile.name }}"
                 style="
@@ -179,6 +179,49 @@ layout: default
         </div>
         {% endfor %}
       </div>
+
+      <!-- PhD Students (Excluding the professor and visiting students) -->
+      <div class="row justify-content-center">
+        {% assign phd_students = site.members | where_exp: "member",
+        "member.group == 'PhD Student'" %} {% for student in phd_students %}
+        <div class="col-6 col-md-2 mb-3">
+          {% if student.profile.website %}
+          <a href="{{ student.profile.website }}" class="no-decoration">
+            {% endif %}
+            <div
+              class="card hoverable m-2 text-center team-card-short"
+              style="height: 250px"
+            >
+              <img
+                src="{{ student.profile.image | default: 'husky2.jpg' | prepend: '/assets/img/' | relative_url }}"
+                class="card-img-top mx-auto mt-4"
+                alt="{{ student.profile.name }}"
+                style="
+                  height: 100px;
+                  width: 100px;
+                  object-fit: cover;
+                  border-radius: 50%;
+                "
+              />
+              <div class="card-body">
+                <h5
+                  class="card-title m-0"
+                  style="height: 50px; margin-top: 15px"
+                >
+                  {{ student.profile.name }}
+                </h5>
+                <p class="card-text" style="margin-top: 5px">
+                  {{ student.title }}
+                </p>
+              </div>
+            </div>
+            {% if student.profile.website %}
+          </a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+
       <!-- Research Assistants -->
       <div class="row justify-content-center">
         {% assign research_assistants = site.members | where_exp: "member",
@@ -193,7 +236,7 @@ layout: default
               style="height: 250px"
             >
               <img
-                src="{{ assistant.profile.image | default: 'husky-image.jpeg' | prepend: '/assets/img/' | relative_url }}"
+                src="{{ assistant.profile.image | default: 'husky2.jpg' | prepend: '/assets/img/' | relative_url }}"
                 class="card-img-top mx-auto mt-4"
                 alt="{{ assistant.profile.name }}"
                 style="
