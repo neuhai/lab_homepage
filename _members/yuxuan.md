@@ -16,7 +16,7 @@ teaser: >
 profile:
   name: Yuxuan Lu #your fullname here
   align: right
-  image: yuxuan_avatar.png
+  image: /team/yuxuan_avatar.png
   twitter: leoleoasd
   github: leoleoasd
   email: lu.yuxuan@northeastern.edu

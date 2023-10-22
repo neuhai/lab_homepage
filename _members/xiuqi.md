@@ -14,7 +14,7 @@ teaser: >
 profile:
   name: Xiuqi Zhu #your fullname here
   align: right
-  image: xiuqi.png
+  image: /team/xiuqi.png
   twitter: z_xiuqi
   github:
   email: zhu.xiu@northeastern.edu

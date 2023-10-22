@@ -10,12 +10,12 @@ description:
 lastname: Yao
 
 teaser: >
-  He's a fourth-year Ph.D. candidate at Rensselaer Polytechnic Institute (Advisor: Jim Hendler) in Computer Science. His research interests lie at the interaction of natural language processing and human-computer interaction.
+  He's a fifth-year Ph.D. candidate at Rensselaer Polytechnic Institute (Advisor: Prof. Jim Hendler) in Computer Science. His research interests lie at the intersection of NLP and HCI, currently focusing on enhancing human-AI collaborative workflow in various real-world scenarios.
 
 profile:
-  name: Bingsheng Yao #your fullname here
+  name: Bingsheng 'Arthur' Yao #your fullname here
   align: right
-  image: 2.jpg
+  image: 4.jpg
   twitter:
   github:
   email:

@@ -16,7 +16,7 @@ teaser: >
 profile:
   name: Shao Zhang
   align: right
-  image: shao.jpg
+  image: /team/shao.jpg
   role: Visiting Student
   twitter:
   github: ShaoZhang0115
@@ -24,7 +24,7 @@ profile:
   website: https://shaozhang.info
   orcid:
   address: >
-    440 Huntington Avenue, 310C West Village H
-    Boston, Massachusetts 02115 <br />
-    USA
+    Khoury College of Computer Sciences<br />
+    440 Huntington Avenue, 202 West Village H<br />
+    Boston, MA 02115
 ---
