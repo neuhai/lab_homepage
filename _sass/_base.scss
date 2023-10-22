@@ -1054,3 +1054,36 @@ nav[data-toggle='toc'] {
     padding-top: 0.5rem;
   }
 }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  margin: 0 auto; /* Centers the brand */
+  position: initial;
+  transform: initial;
+}
+
+.header-container .navbar-brand {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar-header {
+    flex-direction: column; /* Stacks items vertically */
+  }
+  .navbar-brand {
+    margin-bottom: 10px;
+  }
+}
