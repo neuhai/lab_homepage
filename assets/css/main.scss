@@ -13,3 +13,78 @@ $max-content-width: {{ site.max_width }};
   "base",
   "distill"
 ;
+
+.about-page .slider-container {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  margin-bottom: 50px;
+}
+
+.about-page .card-container {
+  min-width: 30%;
+  scroll-snap-align: start;
+}
+
+.about-page .card {
+  min-height: 400px; 
+}
+
+.about-page .team-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;  
+}
+
+.about-page .team-card {
+  width: 20%; 
+  margin: 0 2.5%;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.about-page .team-card:hover {
+  transform: scale(1.05);
+}
+
+.about-page .team-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-page .team-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.about-page .team-card > a > div {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f7f7f7;
+}
+
+.about-page .card-narrow {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 10px;
+}
+
+.about-page .team-card-long {
+  height: 300px;
+  min-height: 300px;
+}
+
+.about-page .team-card-short {
+  height: 250px;
+  min-height: 250px;
+}
+
+.publication-image {
+  max-width: 180px;
+  max-height: 180px;
+  display: block;
+  margin: 0 auto;
+}

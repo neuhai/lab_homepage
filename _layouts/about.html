@@ -3,115 +3,198 @@ layout: default
 ---
 
 <!-- about.html -->
-      <div class="post">
-        <header class="post-header">
-          <h1 class="post-title">
-           {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
-          </h1>
-          <p class="desc">{{ page.subtitle }}</p>
-        </header>
+<div class="post about-page">
+  <header class="post-header">
+    <h1 class="post-title">
+      {% if site.title == "blank" -%}<span class="font-weight-bold"
+        >{{ site.first_name }}</span
+      >
+      {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%-
+      endif %}
+    </h1>
+    <p class="desc">{{ page.subtitle }}</p>
+  </header>
 
-        <article>
-          {% if page.profile -%}
-          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
-            {%- if page.profile.image %}
-              {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+  <article>
+    {% if page.profile -%}
+    <div
+      class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}"
+    >
+      {%- if page.profile.image %} {%- assign profile_image_path =
+      page.profile.image | prepend: 'assets/img/' -%} {% if
+      page.profile.image_circular %} {%- assign profile_image_class = "img-fluid
+      z-depth-1 rounded-circle" -%} {% else %} {%- assign profile_image_class =
+      "img-fluid z-depth-1 rounded" -%} {% endif %} {% include figure.html
+      path=profile_image_path class=profile_image_class alt=page.profile.image
+      -%} {% endif -%} {%- if page.profile.address %}
+      <div class="address">{{ page.profile.address }}</div>
+      {%- endif %}
+    </div>
+    {%- endif %}
 
-              {% if page.profile.image_circular %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
-              {% else %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
-              {% endif %}
+    <div class="clearfix">{{ content }}</div>
 
-              {% include figure.html
-              path=profile_image_path
-              class=profile_image_class
-              alt=page.profile.image -%}
-            {% endif -%}
-            {%- if page.profile.address %}
-            <div class="address">
-              {{ page.profile.address }}
+    <!-- News -->
+    <div class="row">
+      <!-- Left: News -->
+      <div class="col-md-6">
+        {% if page.news and site.announcements.enabled -%}
+        <h2>
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit"
+            >news</a
+          >
+        </h2>
+        {%- include news.html limit=true %} {%- endif %}
+      </div>
+
+      <!-- Right：Twitter -->
+      <div class="col-md-6">
+        <a
+          class="twitter-timeline"
+          data-height="500"
+          href="https://twitter.com/dakuowang?ref_src=twsrc%5Etfw"
+          >Tweets by dakuowang</a
+        >
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+      </div>
+    </div>
+
+    <!-- Research -->
+    <h2>
+      <a href="{{ '/project/' | relative_url }}" style="color: inherit"
+        >Our Research</a
+      >
+    </h2>
+    {% assign projects = site.projects | where: "project_frontpage", true |
+    sort: "category" %}
+
+    <div class="slider-container">
+      {% for project in projects %}
+      <div class="card-container">
+        <a
+          href="{{ item.url | append: project.title | relative_url }}"
+          class="no-decoration"
+        >
+          <div
+            class="card hoverable h-100 card-narrow m-2"
+            style="height: 200px !important"
+          >
+            <div class="card-body p-2">
+              <h5 class="card-title m-0" style="padding-left: 10px">
+                {{ project.title }}
+              </h5>
             </div>
-            {%- endif %}
+            <div class="card-body m-0">{{ project.short_intro }}</div>
           </div>
-          {%- endif %}
+        </a>
+      </div>
+      {% endfor %}
+    </div>
 
-          <div class="clearfix">
-            {{ content }}
-          </div>
+    <!-- Team -->
+    <h2>
+      <a href="{{ '/team/' | relative_url }}" style="color: inherit">Team</a>
+    </h2>
 
-          
-          <!-- News -->
-          {% if page.news and site.announcements.enabled -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
-            {%- include news.html limit=true %}
-          {%- endif %}
-
-          <!-- Research -->
-          <h2><a href="{{ '/project/' | relative_url }}" style="color: inherit;">Our Research</a></h2>
-          {% assign projects = site.projects | where: "project_frontpage", true | sort: "category" %}
-            <div class="d-flex flex-wrap align-content-stretch justify-content-center m-n2  no-gutters" style="padding-top: 20px;">
-              {% for project in projects %}
-                  {% assign colsMod6 = forloop.length | modulo: 6 %}
-                  {% assign colIdMod4 = forloop.index | modulo: 4 %}
-                  {% if colsMod6 == 1 and colIdMod4 == 1 %}<div class="col-md-2 w-100"></div>{% endif %}
-                  <div class="col-6 col-sm-3 col-md-2 mb-3">
-                      <a href="{{ item.url | append: project.title | relative_url }}" class="no-decoration">
-                          <div class="card hoverable h-100 m-2">
-                              <!-- <img src="{{ '/assets/img/' | append: member.profile.image | relative_url }}" class="card-img-top" alt="{{ member.profile.name }}" /> -->
-                              <div class="card-body p-2">
-                                  <h5 class="card-title m-0" style="padding-left:10px">{{ project.title }}</h5>
-                              </div>
-                              <div class="card-body m-0">{{ project.short_intro }}</div>
-                          </div>
-                      </a>
-                  </div>
-              {% endfor %}
-             </div>             
-          <!-- Team -->
-            <h2><a href="{{ '/team/' | relative_url }}" style="color: inherit;">team</a></h2>
-          {% assign members = site.members | where: "team_frontpage", true | sort: "group" %}
-            <div class="d-flex flex-wrap align-content-stretch justify-content-center m-n2  no-gutters" style="padding-top: 20px;">
-              {% for member in members %}
-                  {% assign colsMod6 = forloop.length | modulo: 6 %}
-                  {% assign colIdMod4 = forloop.index | modulo: 4 %}
-                  {% if colsMod6 == 1 and colIdMod4 == 1 %}<div class="col-md-2 w-100"></div>{% endif %}
-                  <div class="col-6 col-sm-3 col-md-2 mb-3">
-                      <a href="{{ member.profile.website }}" class="no-decoration">
-                          <div class="card hoverable h-100 m-2">
-                              <img src="{{ '/assets/img/' | append: member.profile.image | relative_url }}" class="card-img-top" alt="{{ member.profile.name }}" />
-                              <div class="card-body p-2">
-                                  <div class="card-title m-0">{{ member.title }}</div>
-                              </div>
-                          </div>
-                      </a>
-                  </div>
-              {% endfor %}
-             </div>    
-
-          <!-- Selected papers -->
-          {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
-            {%- include selected_papers.html %}
-          {%- endif %}
-
-           <!-- Dakuo's Twitter -->
-          <!-- <a class="twitter-timeline" data-width="1000" data-height="400" data-theme="dark" href="https://twitter.com/dakuowang?ref_src=twsrc%5Etfw">Tweets by dakuowang</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-
-          <!-- Social -->
-          {%- if page.social %}
-            <div class="social">
-              <div class="contact-icons">
-                {% include social.html %}
+    <div class="container">
+      <!-- Professor -->
+      <div class="row justify-content-center" style="padding-top: 20px">
+        {% assign professor = site.members | where:"group", "Faculty" | first %}
+        <div class="col-12 col-md-3 mb-3">
+          <a href="{{ professor.profile.website }}" class="no-decoration">
+            <div
+              class="card hoverable m-2 text-center team-card-long"
+              style="height: 250px"
+            >
+              <img
+                src="{{ professor.profile.image | default: '/assets/img/default-avatar.jpg' | prepend: '/assets/img/' | relative_url }}"
+                class="card-img-top mx-auto mt-5"
+                alt="{{ professor.profile.name }}"
+                style="
+                  height: 120px;
+                  width: 120px;
+                  object-fit: cover;
+                  border-radius: 50%;
+                "
+              />
+              <div class="card-body">
+                <h5
+                  class="card-title m-0"
+                  style="height: 50px; margin-top: 15px"
+                >
+                  {{ professor.profile.name }}
+                </h5>
+                <p class="card-text" style="margin-top: 5px">
+                  {{ professor.title }}
+                </p>
               </div>
-
-              <div class="contact-note">
-                {{ site.contact_note }}
-              </div>
-
             </div>
-          {%- endif %}
+          </a>
+        </div>
+      </div>
 
-        </article>
+      <!-- All Students (Excluding the professor) -->
+      <div class="row justify-content-center">
+        {% assign students = site.members | where_exp: "member", "member.group
+        != 'Faculty'" %} {% for student in students %}
+        <div class="col-6 col-md-2 mb-3">
+          <a href="{{ student.profile.website }}" class="no-decoration">
+            <div
+              class="card hoverable m-2 text-center team-card-short"
+              style="height: 250px"
+            >
+              <img
+                src="{{ student.profile.image | default: '/assets/img/default-avatar.jpg' | prepend: '/assets/img/' | relative_url }}"
+                class="card-img-top mx-auto mt-4"
+                alt="{{ student.profile.name }}"
+                style="
+                  height: 100px;
+                  width: 100px;
+                  object-fit: cover;
+                  border-radius: 50%;
+                "
+              />
+              <div class="card-body">
+                <h5
+                  class="card-title m-0"
+                  style="height: 50px; margin-top: 15px"
+                >
+                  {{ student.profile.name }}
+                </h5>
+                <p class="card-text" style="margin-top: 5px">
+                  {{ student.title }}
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
 
+    <!-- Selected papers -->
+    {% if page.selected_papers -%}
+    <h2>
+      <a href="{{ '/publications/' | relative_url }}" style="color: inherit"
+        >selected publications</a
+      >
+    </h2>
+    {%- include selected_papers.html %} {%- endif %}
+
+    <!-- Dakuo's Twitter -->
+    <!-- <a class="twitter-timeline" data-width="1000" data-height="400" data-theme="dark" href="https://twitter.com/dakuowang?ref_src=twsrc%5Etfw">Tweets by dakuowang</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+
+    <!-- Social -->
+    {%- if page.social %}
+    <div class="social">
+      <div class="contact-icons">{% include social.html %}</div>
+
+      <div class="contact-note">{{ site.contact_note }}</div>
+    </div>
+    {%- endif %}
+  </article>
 </div>
