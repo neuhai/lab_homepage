@@ -37,7 +37,7 @@ layout: default
     <!-- News -->
     <div class="row">
       <!-- Left: News -->
-      <div class="col-md-6">
+      <div class="col-md-8">
         {% if page.news and site.announcements.enabled -%}
         <h2>
           <a href="{{ '/news/' | relative_url }}" style="color: inherit"
@@ -48,7 +48,7 @@ layout: default
       </div>
 
       <!-- Right：Twitter -->
-      <div class="col-md-6">
+      <div class="col-md-4">
         <a
           class="twitter-timeline"
           data-height="500"
@@ -112,11 +112,11 @@ layout: default
             >
               <img
                 src="{{ professor.profile.image | default: '/assets/img/default-avatar.jpg' | prepend: '/assets/img/' | relative_url }}"
-                class="card-img-top mx-auto mt-5"
+                class="card-img-top mx-auto mt-4"
                 alt="{{ professor.profile.name }}"
                 style="
-                  height: 120px;
-                  width: 120px;
+                  height: 150px;
+                  width: 150px;
                   object-fit: cover;
                   border-radius: 50%;
                 "
@@ -140,15 +140,18 @@ layout: default
       <!-- All Students (Excluding the professor) -->
       <div class="row justify-content-center">
         {% assign students = site.members | where_exp: "member", "member.group
-        != 'Faculty'" %} {% for student in students %}
+        != 'Faculty' and member.group != 'Research Assistant'" %} {% for student
+        in students %}
         <div class="col-6 col-md-2 mb-3">
+          {% if student.profile.website %}
           <a href="{{ student.profile.website }}" class="no-decoration">
+            {% endif %}
             <div
               class="card hoverable m-2 text-center team-card-short"
               style="height: 250px"
             >
               <img
-                src="{{ student.profile.image | default: '/assets/img/default-avatar.jpg' | prepend: '/assets/img/' | relative_url }}"
+                src="{{ student.profile.image | default: 'husky-image.jpeg' | prepend: '/assets/img/' | relative_url }}"
                 class="card-img-top mx-auto mt-4"
                 alt="{{ student.profile.name }}"
                 style="
@@ -170,7 +173,51 @@ layout: default
                 </p>
               </div>
             </div>
+            {% if student.profile.website %}
           </a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      <!-- Research Assistants -->
+      <div class="row justify-content-center">
+        {% assign research_assistants = site.members | where_exp: "member",
+        "member.group == 'Research Assistant'" %} {% for assistant in
+        research_assistants %}
+        <div class="col-6 col-md-2 mb-3">
+          {% if assistant.profile.website %}
+          <a href="{{ assistant.profile.website }}" class="no-decoration">
+            {% endif %}
+            <div
+              class="card hoverable m-2 text-center team-card-short"
+              style="height: 250px"
+            >
+              <img
+                src="{{ assistant.profile.image | default: 'husky-image.jpeg' | prepend: '/assets/img/' | relative_url }}"
+                class="card-img-top mx-auto mt-4"
+                alt="{{ assistant.profile.name }}"
+                style="
+                  height: 100px;
+                  width: 100px;
+                  object-fit: cover;
+                  border-radius: 50%;
+                "
+              />
+              <div class="card-body">
+                <h5
+                  class="card-title m-0"
+                  style="height: 50px; margin-top: 15px"
+                >
+                  {{ assistant.profile.name }}
+                </h5>
+                <p class="card-text" style="margin-top: 5px">
+                  {{ assistant.title }}
+                </p>
+              </div>
+            </div>
+            {% if assistant.profile.website %}
+          </a>
+          {% endif %}
         </div>
         {% endfor %}
       </div>
