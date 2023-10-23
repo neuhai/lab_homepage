@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I am joining Northeastern University as an Associate Professor at Khoury and CAMD!
+I am joining Northeastern University as an Associate Professor at Khoury and CAMD in Spring 2023!
