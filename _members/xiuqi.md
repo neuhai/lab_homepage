@@ -9,9 +9,10 @@ title: PhD Student
 description:
 lastname: Zhu
 
-teaser: > Xiuqi a First-Year Ph.D. student at Northeastern_CAMD advised by Prof. /
-Dakuo Wang. His current research interest centers on Human-Computer Interaction (HCI) and Human-AI collaboration, 
-with a specific focus on designing human-centered AI systems foster equitable, inclusive and effective education necessary.
+teaser: >
+  Yuxuan is a first-year Ph.D. student at Northeastern University in Computer Science, advised by Dakuo Wang. 
+  His research interest lies in natural language processing and human-computer interaction, especially in training, 
+  running and utilizing Large Language Models effiently.
 profile:
   name: Xiuqi Zhu #your fullname here
   align: right
