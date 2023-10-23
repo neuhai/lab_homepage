@@ -6,7 +6,7 @@ img: assets/img/sepsis/paradigm.png
 importance: 1
 category: In progress
 project_frontpage: true
-short_intro: Today's AI systems for medical decision support often succeed on benchmark datasets in research papers but fail in real-world deployment. 
+short_intro: We argue that a human-centered AI system needs to support human experts in the intermediate stages of a medical decision-making process (e.g., generating hypotheses or gathering data), instead of focusing only on the final decision.
 
 ---
 <h1>Human-AI Collaboration in Complex Medical Decision Making</h1>
