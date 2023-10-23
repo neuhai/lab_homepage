@@ -10,9 +10,7 @@ description:
 lastname: Zhu
 
 teaser: >
-  Yuxuan is a first-year Ph.D. student at Northeastern University in Computer Science, advised by Dakuo Wang. 
-  His research interest lies in natural language processing and human-computer interaction, especially in training, 
-  running and utilizing Large Language Models effiently.
+
 profile:
   name: Xiuqi Zhu #your fullname here
   align: right
