@@ -41,7 +41,7 @@ layout: default
         {% if page.news and site.announcements.enabled -%}
         <h2>
           <a href="{{ '/news/' | relative_url }}" style="color: inherit"
-            >news</a
+            >News</a
           >
         </h2>
         {%- include news.html limit=true %} {%- endif %}
@@ -66,7 +66,7 @@ layout: default
     <!-- Research -->
     <h2>
       <a href="{{ '/project/' | relative_url }}" style="color: inherit"
-        >Our Research</a
+        >Projects</a
       >
     </h2>
     {% assign projects = site.projects | where: "project_frontpage", true |
