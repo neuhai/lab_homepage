@@ -4,7 +4,7 @@ title: Human-AI Collaboration For Education
 description: This project aims to investigate how to encourage the teaching/learning process between teachers and students through these real-world AI system.
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: In progress
 project_frontpage: true
 short_intro: There is a cross-campus livestreaming classroom paradigm of students from different geo-locations can take the same course simultaneously, we wish to design novel Human-AI system to support and satisfied all the stakeholders during this paradigm.
 
