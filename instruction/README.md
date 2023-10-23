@@ -1,13 +1,16 @@
 ## Table Of Contents
 
+- [Table Of Contents](#table-of-contents)
 - [Getting started](#getting-started)
   - [Installation](#installation)
 - [Projects](#projects)
   - [Adding a New Project](#adding-a-new-project)
   - [Updating an Existing Project](#updating-an-existing-project)
+  - [Presentation and Layout](#presentation-and-layout)
 - [Team Members](#team-members)
   - [Adding a New Team Member](#adding-a-new-team-member)
   - [Managing Your Member Profile](#managing-your-member-profile)
+  - [Presentation and Display](#presentation-and-display)
 - [License](#license)
 
 ## Getting started
@@ -44,6 +47,7 @@ The `projects` collection allows you to showcase your various works in a structu
 2. **File Creation**:
 
    - Initiate a new markdown (`.md`) file. Choose a descriptive name for it, for instance, `my-project.md`.
+   - You can copy the `template.md` for an easy start but DO NOT change it.
 
 3. **Front Matter**:
 
