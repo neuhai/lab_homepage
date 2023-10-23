@@ -1,8 +1,8 @@
 ---
 layout: about
 inline: false
-group: Visiting Student
-group_rank: 2
+group: PhD Student
+group_rank: 3
 team_frontpage: true
 
 title: Visiting Student
