@@ -6,7 +6,7 @@ img: assets/img/12.jpg
 importance: 1
 category: In progress
 project_frontpage: true
-short_intro: There is a cross-campus livestreaming classroom paradigm of students from different geo-locations can take the same course simultaneously, we wish to design novel Human-AI system to support and satisfied all the stakeholders during this paradigm.
+short_intro: AI should not directly replace teachers but support all stakeholders to teach/receive education more efficiently, easily and reliably. We design Human-AI centred system to encourage all the interactions.
 
 ---
 
