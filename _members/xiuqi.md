@@ -10,7 +10,7 @@ description:
 lastname: Zhu
 
 teaser: >  
-He is a First-Year Ph.D. student at Northeastern_CAMD advised by Prof. Dakuo Wang. His current research interest centers on Human-Computer Interaction (HCI) and Human-AI collaboration, with a specific focus on designing human-centered AI systems foster equitable, inclusive and effective education necessary.
+  He is a First-Year Ph.D. student at Northeastern_CAMD advised by Prof. Dakuo Wang. His current research interest centers on Human-Computer Interaction (HCI) and Human-AI collaboration, with a specific focus on designing human-centered AI systems foster equitable, inclusive and effective education necessary.
 
 profile:
   name: Xiuqi Zhu #your fullname here
