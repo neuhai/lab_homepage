@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I had a great visit at HKUST! Sincerely thank Prof. Huaming Qu and Prof. Xiaojuan Ma, learned a lot about teaching, mentorship, research, and leadership.
+Prof. Dakuo Wang had a great visit at HKUST! Sincerely thank [Prof. Huaming Qu](http://huamin.org/) and [Prof. Xiaojuan Ma](https://www.cse.ust.hk/~mxj/), learned a lot about teaching, mentorship, research, and leadership.

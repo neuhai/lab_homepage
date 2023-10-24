@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I am joining Northeastern University as an Associate Professor at Khoury and CAMD in Spring 2023!
+Prof. Dakuo Wang is joining Northeastern University as an Associate Professor at Khoury and CAMD in Spring 2023!
