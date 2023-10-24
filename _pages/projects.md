@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Projects
-title_t: projects
+title_t: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: On-going projects in our lab.
 nav: true
 nav_order: 3
 display_categories: [In progress, Archive]
