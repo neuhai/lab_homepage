@@ -15,7 +15,7 @@ teaser: >
 profile:
   name: Zhiping Zhang #your fullname here
   align: right
-  image:
+  image: /team/zhiping.jpg
   twitter:
   github: ZhipingZhangArya
   email: zhip.zhang@northeastern.edu

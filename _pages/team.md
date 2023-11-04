@@ -7,21 +7,37 @@ nav: true
 nav_order: 1
 ---
 
+<style>
+.team-member-image {
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
+}
+.card {
+  margin: 1rem; 
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+}
+.card-body {
+  flex-grow: 1; 
+}
+</style>
+
 {% assign groups = site.members | sort: "group_rank" | map: "group" | uniq %}
 {% for group in groups %}
 
-<h2 style="padding-top: 30px;"> {{ group }} </h2>
+<h2 style="padding-top: 30px;">{{ group }}</h2>
     {% assign members = site.members | sort: "lastname" | where: "group", group %}
     {% for member in members %}
-<p>
-    <div class="card {% if member.inline == false %}hoverable{% endif %}">
-        <div class="row no-gutters">
-            <div class="col-sm-4 col-md-3">
-                {% assign img_src = member.profile.image | default: 'husky2.jpg' %}
-                <img src="{{ '/assets/img/' | append: img_src | relative_url }}" class="card-img img-fluid" alt="{{ member.profile.name | default: 'Unknown' }}" />
-            </div>
-            <div class="team col-sm-8 col-md-9">
-                <div class="card-body">
+<div class="card {% if member.inline == false %}hoverable{% endif %}" style="margin-bottom: 1rem;">
+    <div class="row no-gutters">
+        <div class="col-sm-4 col-md-3">
+            {% assign img_src = member.profile.image | default: 'husky2.jpg' %}
+            <img class="team-member-image" src="{{ '/assets/img/' | append: img_src | relative_url }}" alt="{{ member.profile.name | default: 'Unknown' }}" />
+        </div>
+        <div class="team col-sm-8 col-md-9">
+            <div class="card-body">
                     {% if member.inline == false %}
                     {% if member.profile.website %}
                     <a href="{{ member.profile.website }}">
@@ -55,9 +71,8 @@ nav_order: 1
                         <small class="test-muted"><i class="fas fa-thumbtack"></i> {{ member.profile.address | default: 'No Address' | replace: '<br />', ', ' }}</small>
                     </p>
                 </div>
-            </div>
         </div>
     </div>
-</p>
+</div>
     {% endfor %}
 {% endfor %}
