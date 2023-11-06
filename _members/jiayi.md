@@ -14,10 +14,10 @@ teaser: >
 profile:
   name: Jiayi Lu #your fullname here
   align: right
-  image:
+  image: /team/jiayi.JPG
   twitter:
-  github:
-  email:
+  github: Joyce-JiayiLu
+  email: lu.jiayi2@northeastern.edu
   website:
   orcid:
   address: >

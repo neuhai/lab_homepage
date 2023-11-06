@@ -9,7 +9,7 @@ description:
 lastname: Chan
 publications:
 teaser: >
-  [A brief introduction about yourself, your research, and your academic affiliations]
+  Hi, I am Reina. I am a Master’s student in Computer Science at Northeastern University. My research interests include Human-Computer Interaction, Human-AI collaboration, and accessible technology. My research focuses on developing and providing technology solutions that are not only accessible but also ensure enriching user experiences across different special population groups.
 profile:
   name: Reina Chan
   align: right
