@@ -10,14 +10,15 @@ description:
 lastname: Yang
 
 teaser: >
+  Hi, I am currently a master's student at University of Michigan School of Information (I am graduating Dec. 2023 and applying for Fall24 PhD). I am interested in HCI research in human-AI interaction, computer-supported collaborative work, and health interventions and behavior change.
 
 profile:
   name: Ziqi Yang #your fullname here
   align: right
-  image:
-  twitter:
-  github:
-  email:
+  image: /team/ziqi.jpg
+  twitter: EugeniaYang10
+  github: EugeniaYang
+  email: yangziqi@umich.edu
   website: https://eugeniayang.github.io/
   orcid:
   address: >

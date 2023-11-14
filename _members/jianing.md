@@ -10,14 +10,15 @@ description:
 lastname: Yu
 
 teaser: >
+  Jianing is a research assistant in the Human-Centered AI Lab at NEU. Graduate from Hong Kong University, she specializes in human-centered design innovation. Her research interest currently lies in Human-Computer Interaction (HCI), AI-generative design, and the application of human-AI collaboration in different domains such as medical health and digital heritage.
 
 profile:
   name: Jianing Yu #your fullname here
   align: right
-  image:
+  image: /team/jianing-yu.jpg
   twitter:
-  github:
-  email:
+  github: yujianing0210
+  email: jiani.yu@northeastern.edu
   website:
   orcid:
   address: >
