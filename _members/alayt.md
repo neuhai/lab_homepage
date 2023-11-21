@@ -19,7 +19,7 @@ profile:
   twitter: AlaytAbraham
   github:
   email: issak.a@northeastern.edu
-  website: www.linkedin.com/in/alayt-issak
+  website: https://www.linkedin.com/in/alayt-issak
   orcid: 0009-0005-8149-7358
   address: >
     College of Arts, Media and Design <br />
