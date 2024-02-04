@@ -1,0 +1,17 @@
+:root{
+    --table-color: #212529;
+    --table-bg: #fff;
+}
+html[data-theme='dark'] {
+    --table-color: #fff;
+    --table-bg: transparent;
+}
+
+.neu-hai-table {
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: var(--table-color);
+        background-color: var(--table-bg);
+    }
+}
