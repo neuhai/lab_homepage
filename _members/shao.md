@@ -11,7 +11,7 @@ lastname: Zhang
 publications:
 
 teaser: >
-  I am a third-year PhD student at Shanghai Jiao Tong Univeristy supervied by Prof. Ying Wen and now is a visiting student at Northeastern Human-Centered AI Lab. My research interests include Human-AI Collaboration and Multi-agent System. Specifically, I am now focusing on: Human-in-the-Loop data annotation and AI-in-the-Loop deployment in real world scenario, Involving Large Language Models in Human-AI Collaboration, Zero-shot Coordination in Human-AI Collaboration, Bidirectional Alignment in Human-AI Team.
+  I am a third-year PhD student at Shanghai Jiao Tong Univeristy supervied by Prof. Ying Wen and now a visiting student at Northeastern Human-Centered AI Lab. My research interests include Human-AI Collaboration and Multi-agent System. Specifically, I am now focusing on: Human-in-the-Loop data annotation and AI-in-the-Loop deployment in real world scenario, Involving Large Language Models in Human-AI Collaboration, Zero-shot Coordination in Human-AI Collaboration, Bidirectional Alignment in Human-AI Team.
 
 profile:
   name: Shao Zhang
